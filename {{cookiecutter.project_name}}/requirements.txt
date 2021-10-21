@@ -1,0 +1,10 @@
+flask-sugar
+flask-seek
+black
+isort
+loguru
+PyYAML
+sqlalchemy
+typer
+mysqlclient
+redis

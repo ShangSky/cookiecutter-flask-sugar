@@ -1,0 +1,8 @@
+{
+    "python.analysis.diagnosticMode": "workspace",
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+    }
+}
