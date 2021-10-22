@@ -21,6 +21,7 @@ pip install cookiecutter
 cookiecutter https://github.com/ShangSky/cookiecutter-flask-sugar.git
 pip install -r requirements.txt
 export PYTHONPATH=$PWD
+python cmd/db_cli.py create-data models
 python main.py
 curl http://127.0.0.1:5000/ping
 ```
@@ -28,7 +29,7 @@ curl http://127.0.0.1:5000/ping
 - 创建表工具
 
 ```shell
-python cmd/db_cli --help
+python cmd/db_cli.py --help
 ```
 
 - 格式化代码
