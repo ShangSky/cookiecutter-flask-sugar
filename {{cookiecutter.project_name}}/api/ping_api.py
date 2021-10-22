@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask_sugar import Blueprint
 
 from common.response import resp
 
