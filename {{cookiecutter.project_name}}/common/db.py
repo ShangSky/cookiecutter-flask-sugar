@@ -8,7 +8,9 @@ from sqlalchemy.orm import sessionmaker
 
 import config
 
-engine = create_engine(config.DB_URI, pool_recycle=3600)
+engine = create_engine(
+    config.DB_URI, pool_recycle=config.POOL_RECYCLE, pool_pre_ping=config.POOL_PRE_PING
+)
 Base: Any = declarative_base(engine)
 Session = cast(Type[_Session], sessionmaker(engine))
 
