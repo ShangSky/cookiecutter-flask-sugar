@@ -1,8 +1,14 @@
 from flask_seek import ff
+from flask_sugar import RequestValidationError
 from loguru import logger
 from werkzeug.exceptions import HTTPException
 
 from common.response import error_resp, resp
+
+
+@ff.errorhandler(RequestValidationError)
+def valid_error_handle(e: RequestValidationError) -> dict:
+    return resp(code=400, msg="参数错误", data=e.errors)
 
 
 @ff.errorhandler(HTTPException)
